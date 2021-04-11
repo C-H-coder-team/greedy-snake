@@ -5,7 +5,8 @@
 
 /**地图的长宽，蛇的坐标，长度，方向，食物的位置*/
 int m, n;
-struct node {
+struct node 
+{
 	int x;
 	int y;
 };
@@ -17,20 +18,23 @@ int direct[4][2] = { { -1,0 },{ 1,0 },{ 0,-1 },{ 0,1 } };
 /**定位光标*/
 HANDLE hout = GetStdHandle(STD_OUTPUT_HANDLE);
 COORD coord;
-void locate(int x, int y) {
+void locate(int x, int y)
+{
 	coord.X = y;
 	coord.Y = x;
 	SetConsoleCursorPosition(hout, coord);
 }
 
 /**隐藏光标*/
-void hide() {
+void hide() 
+{
 	CONSOLE_CURSOR_INFO cursor_info = { 1,0 };
 	SetConsoleCursorInfo(hout, &cursor_info);
 }
 
 /**生成随机数*/
-double random(double start, double end) {
+double random(double start, double end) 
+{
 	return start + (end - start)*rand() / (RAND_MAX + 1.0);
 
 }

@@ -26,7 +26,8 @@ bool go_ahead() {
 	node temp;
 	temp = snake[snake_length - 1];
 	bool e = false;
-	for (int i = snake_length - 1; i >= 1; i--) {
+	for (int i = snake_length - 1; i >= 1; i--) 
+	{
 		snake[i] = snake[i - 1];
 	}
 	snake[0].x = snake[0].x + direct[dir][0];
@@ -34,25 +35,29 @@ bool go_ahead() {
 	locate(snake[1].x, snake[1].y);
 	cout << "*";
 	/*如果吃到食物了*/
-	if (snake[0].x == food.x&&snake[0].y == food.y) {
+	if (snake[0].x == food.x&&snake[0].y == food.y)
+	{
 		snake_length++;
 		e = true;
 		snake[snake_length - 1] = temp;
 	}
 	/*输出此时蛇的状态*/
-	if (!e) {
+	if (!e) 
+	{
 		locate(temp.x, temp.y);
 		cout << " ";
 		print_face();
 	}
-	else {
+	else 
+	{
 		print_food();
 		print_smileface();
 	}
 	locate(snake[0].x, snake[0].y);
 	cout << "@";
 	/*如果自撞或者撞墙了*/
-	if (is_correct() == false) {
+	if (is_correct() == false) 
+	{
 		system("cls");
 		cout << "你输了" << endl;
 		cout << "最终长度是：" << snake_length<<endl;

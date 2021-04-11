@@ -2,7 +2,8 @@
 #ifndef LOGO_H
 #define LOGO_H
 #include"stdc++.h"
-void print_logo() {
+void print_logo()
+{
 	cout << "**********   **       **        *        **           **********" << endl;
 	cout << "**********   ***      **       ***       **      **   **********" << endl;
 	cout << "**           ****     **      ** **      **    **     **        " << endl;
@@ -13,7 +14,8 @@ void print_logo() {
 	cout << "        **   **     ****    **     **    **   **      **        " << endl;
 	cout << "**********   **      ***   **       **   **     **    **********" << endl;
 	cout << "**********   **       **  **         **  **       **  **********" << endl;
-	for (int i = 1; i<65; i++) {
+	for (int i = 1; i<65; i++) 
+	{
 		cout << "-";
 	}
 	cout << endl;
